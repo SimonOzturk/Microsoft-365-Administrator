@@ -1,0 +1,95 @@
+{
+    "ID": "<TenantID>",
+    "Name": "<TenantPrefix>",
+    "Domain": "<TenantPrefix>.onmicrosoft.com",
+    "Url": "https://admin.microsoft.com",
+    "DNS": {
+        "FQDN": "<TenantFQDN>",
+        "Server": {
+            "Internal": "10.10.10.10",
+            "External": "1.1.1.1"
+        },
+        "Records": [
+            "AutoDiscover.<TenantFQDN>",
+            "EnterpriseEnrollment.<TenantFQDN>",
+            "EnterpriseRegistration.<TenantFQDN>",
+            "LyncDiscover.<TenantFQDN>",
+            "Sip.<TenantFQDN>"
+        ]
+    },
+    "Graph": {
+        "Url": "https://login.microsoftonline.com/<TenantID>/oauth2/v2.0/token",
+        "Token": "",
+        "OAuth": {
+            "Grant_Type": "client_credentials",
+            "Scope": "https://graph.microsoft.com/.default",
+            "Client_Id": "<ClientID>",
+            "Client_Secret": "<ClientSecret>"
+        }
+    },
+    "AzureAD": {
+        "Domain": "<TenantPrefix>.onmicrosoft.com",
+        "Admin": {
+            "UserName": "admin@<TenantPrefix>.onmicrosoft.com",
+            "Password": "3p%^3vMDjp!c",
+            "Credential": "$null"
+        }
+    },
+    "SharePoint": {
+        "Url": "https://<TenantPrefix>.sharepoint.com/",
+        "Admin": {
+            "Url": "https://<TenantPrefix>-admin.sharepoint.com/",
+            "UserName": "admin@<TenantPrefix>.onmicrosoft.com",
+            "Password": "3p%^3vMDjp!c",
+            "Credential": "$null"
+        }
+    },
+    "Exchange": {
+        "ConnectionUri": "https://outlook.office365.com/powershell-liveid/",
+        "ConfigurationName": "Microsoft.Exchange",
+        "Admin": {
+            "UserName": "admin@<TenantPrefix>.onmicrosoft.com",
+            "Password": "3p%^3vMDjp!c",
+            "Credential": "$null"
+        }
+    },
+    "Complience": {
+        "ConnectionUri": "https://ps.compliance.protection.outlook.com/powershell-liveid/",
+        "ConfigurationName": "Microsoft.Exchange",
+        "Admin": {
+            "UserName": "admin@<TenantPrefix>.onmicrosoft.com",
+            "Password": "3p%^3vMDjp!c",
+            "Credential": "$null"
+        }
+    },
+    "Teams": {
+        "Url": "https://ps.compliance.protection.outlook.com/powershell-liveid/",
+        "Admin": {
+            "UserName": "admin@<TenantPrefix>.onmicrosoft.com",
+            "Password": "3p%^3vMDjp!c",
+            "Credential": "$null"
+        }
+    },
+    "PowerApps": {
+        "Url": "https://make.powerapps.com",
+        "Admin": {
+            "Url": "https://admin.powerplatform.microsoft.com",
+            "UserName": "admin@<TenantPrefix>.onmicrosoft.com",
+            "Password": "3p%^3vMDjp!c",
+            "Credential": "$null"
+        },
+        "Location": {
+            "NorthAmerica": "https://admin.services.crm.dynamics.com",
+            "NorthAmerica2": "https://admin.services.crm9.dynamics.com",
+            "Europe": "https://admin.services.crm4.dynamics.com",
+            "AsiaPacific": "https://admin.services.crm5.dynamics.com",
+            "Oceania": "https://admin.services.crm6.dynamics.com",
+            "Japan": "https://admin.services.crm7.dynamics.com",
+            "SouthAmerica": "https://admin.services.crm2.dynamics.com",
+            "India": "https://admin.services.crm8.dynamics.com",
+            "Canada": "https://admin.services.crm3.dynamics.com",
+            "UnitedKingdom": "https://admin.services.crm11.dynamics.com",
+            "France": "https://admin.services.crm12.dynamics.com"
+        }
+    }
+}

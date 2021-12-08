@@ -3,6 +3,7 @@ using namespace System.Net
 
 Import-Module -Name 'MSOnline'
 Import-Module -Name 'AzureAD'
+Import-Module -Name 'ExchangeOnlineManagement'
 Import-Module -Name 'Microsoft.Online.SharePoint.PowerShell'
 Import-Module -Name 'PnP.PowerShell'
 Import-Module -Name 'MicrosoftTeams'
@@ -24,6 +25,7 @@ $Tenant.Exchange.Admin.Credential = [PSCredential]::new($Tenant.Exchange.Admin.U
 
 Connect-MsolService -Credential $Tenant.AzureAD.Admin.Credential
 Connect-AzureAD -Credential $Tenant.AzureAD.Admin.Credential
+Connect-ExchangeOnline -Credential $Tenant.Exchange.Admin.Credential
 Connect-SPOService -Credential $Tenant.SharePoint.Admin.Credential -Url $Tenant.SharePoint.Admin.Url
 Connect-PnPOnline -Url $Tenant.SharePoint.Admin.Url -UseWebLogin 
 Connect-MicrosoftTeams -Credential $Tenant.Teams.Admin.Credential  

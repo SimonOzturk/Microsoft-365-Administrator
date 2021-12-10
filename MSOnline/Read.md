@@ -8,9 +8,9 @@ $Tenant = Get-Content .\Config.json | ConvertFrom-Json
 ```json
 {
     "AzureAD": {
-        "Domain": "<TenantPrefix>.onmicrosoft.com",
+        "Domain": "M365x722330.onmicrosoft.com",
         "Admin": {
-            "UserName": "admin@<TenantPrefix>.onmicrosoft.com",
+            "UserName": "admin@M365x722330.onmicrosoft.com",
             "Password": "3p%^3vMDjp!c",
             "Credential": "$null"
         }

@@ -36,8 +36,9 @@ $SessionParameters = @{
     ConnectionUri     = $Tenant.Exchange.ConnectionUri
     Credential        = $Tenant.Exchange.Admin.Credential
     Authentication    = 'Basic'
+    AllowRedirection = $true
 }
 
-$ExchangeOnlineSession = New-PSSession @SessionParameters -AllowRedirection
-Import-PSSession $ExchangeOnlineSession -DisableNameChecking
+$ExchangeOnlineSession = New-PSSession @SessionParameters
+Import-PSSession $ExchangeOnlineSession -DisableNameChecking -AllowClobber
 Exit-PSSession $ExchangeOnlineSession

@@ -30,7 +30,7 @@ Get-MsolGroup | ConvertTo-Json | Out-File .\MSOnline\Groups.json
 Get-MsolAccountSku | Format-Table -AutoSize
 
 # List Unlicensed Users and Assign License to them
-Get-MsolUser -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses '<TenantPrefix>:ENTERPRISEPREMIUM'
+Get-MsolUser -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses 'M365x722330:ENTERPRISEPREMIUM'
 
 # Create Security Group for Limit Microsoft 365 Group Creation.
 New-MsolGroup -DisplayName "Microsoft 365 Group Creators" -Description "Members of this group allow to Create Microsoft 365 Group"
